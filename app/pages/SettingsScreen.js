@@ -2,11 +2,13 @@ import React from "react";
 // import { Link, Stack } from "expo-router";
 import { Image, Text, View, SafeAreaView, StyleSheet } from "react-native";
 
+
+
 const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.root}>
       <View>
-        <Text style={styles.text}>Home Screen</Text>
+        <Text style={styles.text}>Settings Screen</Text>
       </View>
     </SafeAreaView>
   );

@@ -1,38 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { useRouter } from 'expo-next-react-navigation';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import 'react-native-gesture-handler'
+import Navigation from './app/Navigation'
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native"; 
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import {
+  MD3LightTheme as DefaultTheme,
+  PaperProvider,
+} from "react-native-paper";
 
-const Stack = createStackNavigator();
-const Tabs = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
+
 
 export default function App() {
-  const router = useRouter();
 
-  const AuthStackScreen = () => (
-    <Stack.Navigator>
-      <Stack.Screen name="login" component={LoginScreen} />
-      <Stack.Screen name="signup" component={SignupScreen} />
-    </Stack.Navigator>
-  );
+  const theme = {
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      primary: "tomato",
+      secondary: "yellow",
+    },
+  };
 
   return (
-    <NavigatorContainer router={router} >
-      <Stack.Navigator>
-        <Stack.Screen name="login" component={LoginScreen} />
-        <Stack.Screen name="signup" component={SignupScreen} />
-      </Stack.Navigator>
-    </NavigatorContainer>
-    
+    <PaperProvider theme={theme}>
+      <Navigation />  
+    </PaperProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#f43f5e",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

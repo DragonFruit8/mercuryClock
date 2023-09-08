@@ -3,36 +3,35 @@ import {
   View,
   Image,
   StyleSheet,
+  SafeAreaView,
   ScrollView,
     Text,
     Pressable,
 } from "react-native";
-import { Button, TextInput } from "react-native-paper";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+
+
 
 
 const Dashboard = () => {
-
-
   return (
-    <View style={styles.root}>
-      
-      <Text style={styles.text}>Welcome to Expo Router</Text> 
-      <Text style={styles.text}>This is a simple example of how to use Expo Router</Text>   
-      <Button 
-        mode="contained"
-        onPress={() => {
-          console.log("Pressed"); 
-        }}
-      >
-        Press me
-      </Button>
-    </View>
+    // Dashboard bottom navigation with export to app.js
+    <SafeAreaView style={styles.root}>
+      <View>
+        <Text style={styles.text}>Dashboard</Text>
+      </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   root: {
+    flex: 1,
+    backgroundColor: "#fff",
     alignItems: "center",
+    justifyContent: "center",
     padding: 20,
   },
   logo: {
@@ -48,7 +47,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     color: "#000",
-  },
+    textAlign: "center",
+    marginBottom: 20,
+
+  }
 });
 
 export default Dashboard;
