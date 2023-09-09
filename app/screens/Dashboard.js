@@ -12,37 +12,14 @@ import {
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Button, TextInput, Provider } from "react-native-paper";
-import Clock from 'react-live-clock';
-import MapView from "react-native-maps";
+import Clock from "react-live-clock";
+// import MapView from "react-native-maps";
+import StatusDashboard from "../components/StatusDashboard";
 
 const Dashboard = () => {
-
-
-
   return (
     // Dashboard bottom navigation with export to app.js
     <Provider>
-          <MapView
-            style={{
-              flex: 1,
-              flexGrow: 1,
-              flexShrink: 0,
-              width: "100%",
-              height: "100%",
-              flexDirection: "column",
-              backgroundColor: "#fff",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: 20,
-              gap: 20,
-            }}
-            region={{
-              latitude: 37.78825,
-              longitude: -122.4324,
-              latitudeDelta: 0.015,
-              longitudeDelta: 0.0121,
-            }}
-          />
       <SafeAreaView style={styles.root}>
         <Clock
           element={Text}
@@ -51,39 +28,8 @@ const Dashboard = () => {
           timezone={"US/Eastern"}
         />
         <Text style={styles.header}>Dashboard</Text>
+          <StatusDashboard />
 
-        {/* Time Clock Section centered AND two buttons to clock in/out */}
-        <View style={styles.clock}>
-          <Text style={styles.clockText}>Time Clock</Text>
-
-          
-          <View style={styles.clockButtons}>
-            <Button
-              mode="contained"
-              onPress={() => alert(`Clocked in at ${
-                new Date().toLocaleTimeString()
-                }`)}
-              
-              style={{ marginTop: 20, backgroundColor: "green", color: "white" }}
-            >
-              Clock In
-            </Button>
-            <Button
-              mode="contained"
-              onPress={() => alert(`Clocked OUT at ${
-                new Date().toLocaleTimeString()
-              }`)}
-              style={{ marginTop: 20, backgroundColor: "teal", color: "white" }} 
-            >
-              Clock Out
-            </Button>
-          </View>
-        </View>
-        {/* End Time Clock Section */}
-
-        {/* Status Section */}
-
-        {/* End Status Section */}
       </SafeAreaView>
     </Provider>
   );
@@ -95,7 +41,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    padding: 20,
+    padding: 5,
   },
   logo: {
     width: "70%",
@@ -111,7 +57,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#000",
     textAlign: "center",
-    marginBottom: 20,
   },
   header: {
     fontSize: 24,
@@ -119,6 +64,7 @@ const styles = StyleSheet.create({
     color: "#000",
     textAlign: "center",
     marginBottom: 20,
+    padding: 10,
   },
   clock: {
     flex: 1,
@@ -128,7 +74,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    padding: 20,
+    padding: 0,
     gap: 20,
   },
   clockText: {
@@ -146,7 +92,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    padding: 20,
+    padding: 5,
     gap: 20,
   },
 });
