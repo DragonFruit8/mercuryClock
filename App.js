@@ -24,9 +24,11 @@ export default function App() {
   };
 
   return (
+    <>
     <PaperProvider theme={theme}>
-      <Navigation />  
-    </PaperProvider>
+      <Navigation />
+      </PaperProvider>
+    </>
   );
 }
 

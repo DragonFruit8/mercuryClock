@@ -1,6 +1,6 @@
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import React from "react";
 import { Button, Settings } from "react-native";
 import { MaterialCommunityIcons, MaterialIcons, Ionicons, Entypo } from "@expo/vector-icons";
 import LoginScreen from "./pages/LoginScreen";
