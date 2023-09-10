@@ -1,21 +1,13 @@
 import React from "react";
-<<<<<<< HEAD
 import {
   View,
   StyleSheet,
   SafeAreaView,
-  Button,
   ScrollView,
 } from "react-native";
 import { Text } from "react-native-paper";
 import MapView from "react-native-maps";
 import { IconButton } from "react-native-paper";
-=======
-import { View, StyleSheet, SafeAreaView, PressableOpacity } from "react-native";
-import { Button } from "react-native-paper";
-import MapView from "react-native-maps";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
->>>>>>> 91b85fc2a2f7ac697659f87ea3d449b2abd3aa62
 
 const StatusDashboard = () => {
   return (
@@ -156,11 +148,7 @@ const styles = StyleSheet.create({
     position: "relative",
     flex: 1,
     backgroundColor: "#f43f5e",
-<<<<<<< HEAD
     flexDirection: "column",
-=======
-    flexDirection: "row",
->>>>>>> 91b85fc2a2f7ac697659f87ea3d449b2abd3aa62
     alignItems: "stretch",
     justifyContent: "stretch",
     margin: 0,
@@ -168,15 +156,11 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-<<<<<<< HEAD
     flexDirection: "column",
-=======
->>>>>>> 91b85fc2a2f7ac697659f87ea3d449b2abd3aa62
     backgroundColor: "#f43f5e",
     alignItems: "center",
     justifyContent: "center",
   },
-<<<<<<< HEAD
   notification: {
     flexDirection: "row",
 
@@ -194,8 +178,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
 
   },
-=======
->>>>>>> 91b85fc2a2f7ac697659f87ea3d449b2abd3aa62
 });
 
 export default StatusDashboard;

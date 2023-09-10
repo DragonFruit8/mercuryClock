@@ -4,18 +4,9 @@ import {
   SafeAreaView,
   Text,
 } from "react-native";
-<<<<<<< HEAD
 import { Provider } from "react-native-paper";
 import Clock from "react-live-clock";
 
-=======
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Button, TextInput, Provider } from "react-native-paper";
-import Clock from "react-live-clock";
-// import MapView from "react-native-maps";
-import StatusDashboard from "../components/StatusDashboard";
->>>>>>> 91b85fc2a2f7ac697659f87ea3d449b2abd3aa62
 
 const Dashboard = () => {
   return (

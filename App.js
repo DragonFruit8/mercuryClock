@@ -128,19 +128,6 @@ function Tab() {
 }
 
 export default function App() {
-<<<<<<< HEAD
-=======
-
-  const theme = {
-    ...DefaultTheme,
-    colors: {
-      ...DefaultTheme.colors,
-      primary: "teal",
-      secondary: "green",
-    },
-  };
-
->>>>>>> 91b85fc2a2f7ac697659f87ea3d449b2abd3aa62
   return (
     <>
       <PaperProvider theme={DefaultTheme}>
