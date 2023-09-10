@@ -1,18 +1,17 @@
 import React from "react";
-// import { Link, Stack } from "expo-router";
 import { Text, View, SafeAreaView, StyleSheet } from "react-native";
 import { useNavigation } from '@react-navigation/native'
 
 
-const HomeScreen = () => {
+const SettingsScreen = () => {
   const navigation = useNavigation();
 
   return (
     <SafeAreaView style={styles.root}>
       <View>
-        <Text style={styles.text}
-        onPress={()=> navigation.navigate('Profile')}
-        >Settings Screen</Text>
+        <Text style={styles.text}>
+          App Settings Page
+        </Text>
       </View>
     </SafeAreaView>
   );
@@ -44,4 +43,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default SettingsScreen;

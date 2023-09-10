@@ -1,16 +1,46 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Button, Settings } from "react-native";
-import { MaterialCommunityIcons, MaterialIcons, Ionicons, Entypo } from "@expo/vector-icons";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import { createStackNavigator } from "@react-navigation/stack";
+import { MaterialCommunityIcons, Ionicons, Entypo } from "@expo/vector-icons";
 import LoginScreen from "./pages/LoginScreen";
 import SignupScreen from "./pages/SignupScreen";
 import SettingsScreen from "./pages/SettingsScreen";
 import Dashboard from "./screens/Dashboard";
+import Profile from "./pages/Profile";
+import StatusDashboard from "./components/StatusDashboard";
+import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
+
+const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 
 const Tab = createBottomTabNavigator();
 
-function TabGroup() {
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: "teal",
+    secondary: "green",
+  },
+};
+
+function MyDrawer() {
+  return (
+    <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Screen name="Home" component={Dashboard} />
+      <Drawer.Screen name="Settings" component={Profile} />
+    </Drawer.Navigator>
+  );
+}
+
+
+
+
+function TabGroup({
+  navigation
+}) {
   return (
     <Tab.Navigator
       initialRouteName="Home"
@@ -30,10 +60,20 @@ function TabGroup() {
           ),
         }}
       />
+      <Tab.Screen
+        name="Drawer"
+        component={MyDrawer}
+        options={{
+          tabBarLabel: "Drawer",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="menu" color={color} size={26} />
+          ),
+        }}
+      />
 
       <Tab.Screen
         name="Status"
-        component={Dashboard}
+        component={StatusDashboard}
         options={{
           tabBarLabelPosition: "center",
           tabBarLabel: "Status",
@@ -44,7 +84,7 @@ function TabGroup() {
       />
       <Tab.Screen
         name="Home"
-        component={Dashboard}
+        component={Profile}
         options={{
           tabBarLabelPosition: "center",
           tabBarLabel: "Home",
@@ -81,9 +121,14 @@ function TabGroup() {
 }
 
 export default function Navigation() {
+
+  
+
   return (
+    <>
     <NavigationContainer>
       <TabGroup />
-    </NavigationContainer>
+      </NavigationContainer>    
+    </>
   );
 }

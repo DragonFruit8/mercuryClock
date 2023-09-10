@@ -1,6 +1,6 @@
 import React from "react";
 // import { Link, Stack } from "expo-router";
-import { Image, Text, View, SafeAreaView, StyleSheet } from "react-native";
+import { Text, View, SafeAreaView, StyleSheet } from "react-native";
 import MapView from "react-native-maps";
 
 const HomeScreen = () => {
@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    padding: 20,
+    padding: 10,
+    margin: 0,
   },
   logo: {
     width: "70%",
