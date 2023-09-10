@@ -21,11 +21,7 @@ const StatusDashboard = () => {
   return (
     <SafeAreaView style={styles.statusDash}>
       <MapView
-<<<<<<< HEAD
-        style={{ flex: 2 }}
-=======
         style={{ flex: 1 }}
->>>>>>> 91b85fc2a2f7ac697659f87ea3d449b2abd3aa62
         region={{
           latitude: 37.78825,
           longitude: -122.4324,
@@ -33,7 +29,6 @@ const StatusDashboard = () => {
           longitudeDelta: 0.0121,
         }}
       />
-<<<<<<< HEAD
       <ScrollView
         style={{
           flex: 1,
@@ -152,70 +147,6 @@ const StatusDashboard = () => {
           {/* User Notification END */}
         </View>
       </ScrollView>
-=======
-      <View
-        style={{
-          flex: 1,
-          flexShrink: 0,
-          height: 200,
-          margin: 0,
-          width: "100%",
-          backgroundColor: "limedarkgreen",
-          zIndex: 1000,
-          position: "absolute",
-          borderRadius: 5,
-          bottom: 0,
-          backgroundColor: "white",
-          borderColor: "black",
-          borderWidth: 4,
-          flexDirection: "row",
-        }}
-      >
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: "white",
-            borderColor: "black",
-            borderWidth: 2,
-            borderTopStartRadius: 10,
-            borderTopEndRadius: 10,
-            width: "100%",
-            height: "80%",
-            position: "absolute",
-            bottom: 0,
-            flexShrink: 0,
-            flexGrow: 1,
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            gap: 20,
-          }}
-        >
-            <Button
-              mode="contained"
-              onPress={() =>
-                alert(`Checked notifications for broadcasted messages`)
-              }
-              style={{
-                backgroundColor: "green",
-                color: "white",
-              }}
-            >
-              Scan
-            </Button>
-            <Button
-              mode="contained"
-              onPress={() =>
-                alert(`Checked out of work order`)
-              }
-              style={{ backgroundColor: "teal", color: "white" }}
-            >
-              CheckOut
-            </Button>
-          
-          </View>
-          </View>
->>>>>>> 91b85fc2a2f7ac697659f87ea3d449b2abd3aa62
     </SafeAreaView>
   );
 };

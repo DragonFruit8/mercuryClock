@@ -30,11 +30,6 @@ const Dashboard = () => {
           style={styles.clockText}
         />
         <Text style={styles.header}>Dashboard</Text>
-<<<<<<< HEAD
-=======
-          <StatusDashboard />
-
->>>>>>> 91b85fc2a2f7ac697659f87ea3d449b2abd3aa62
       </SafeAreaView>
     </Provider>
   );

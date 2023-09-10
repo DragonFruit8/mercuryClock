@@ -12,11 +12,7 @@ const SignupScreen = () => {
   );
 };
 
-<<<<<<< HEAD
 const styles = StyleSheet.create({
 });
-=======
-const styles = StyleSheet.create({});
->>>>>>> 91b85fc2a2f7ac697659f87ea3d449b2abd3aa62
 
 export default SignupScreen;
